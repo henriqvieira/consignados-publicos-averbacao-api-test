@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+group 'br.com.agibank'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.testng:testng:7.4.0'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.4.0'
+    annotationProcessor 'org.testng:testng:7.4.0'
+    implementation "io.rest-assured:rest-assured:4.4.0"
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation "org.json:json:20210307"
+    implementation 'org.jsoup:jsoup:1.14.3'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:9.4.0.jre16'
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'org.mongodb:mongo-java-driver:3.12.10'
+    implementation 'org.mongodb:mongodb-driver-sync:4.3.2'
+    implementation 'org.mongodb:mongodb-driver:3.12.10'
+    implementation 'org.mongodb:bson:4.3.2'
+    implementation 'org.slf4j:slf4j-log4j12:1.7.32'
+    implementation 'io.rest-assured:json-schema-validator:4.4.0'
+    implementation 'com.jayway.jsonpath:json-path-assert:2.6.0'
+
+
+}
+
+test {
+    useTestNG() {
+        testLogging.showStandardStreams = true
+        useDefaultListeners = true
+        suites "src/test/resources/suite.xml"
+    }
+    testLogging {
+        events "PASSED", "FAILED", "SKIPPED"
+    }
+}

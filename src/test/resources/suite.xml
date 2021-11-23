@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Integracoes Consiglog">
+    <test name="Margem Controller" preserve-order="true">
+        <classes>
+            <class name="MargemControllerTest">
+            <methods>
+                <include name="consultaMargemExistente"></include>
+                <include name="consultaMargemInexistente"></include>
+                <include name="criaMargem"></include>
+                <include name="criaMargemCarenciaInvalida"></include>
+                <include name="criaMargemSaldoInsuficiente"></include>
+                <include name="criaMargemQuantidadeContratosExcedida"></include>
+                <include name="criaMargemZetra"></include>
+                <include name="cancelaMargemZetra"></include>
+                <include name="consultaMargemZetra"></include>
+            </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Consignacao Controller" preserve-order="true">
+        <classes>
+        <class name="ConsignacaoControllerTest">
+            <methods>
+                <include name="cancelaConsignacaoMotivoInvalido"></include>
+                <include name="cancelaConsignacaoAdeInexistente"></include>
+                <include name="cancelaConsignacaoJaQuitada"></include>
+                <include name="cancelaConsignacaoComSucesso"></include>
+            </methods>
+        </class>
+        </classes>
+    </test>
+</suite> <!-- Suite -->

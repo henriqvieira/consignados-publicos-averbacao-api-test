@@ -1,0 +1,14 @@
+stages:
+  - test
+
+image: gradle:alpine
+
+ConsignacaoControllerTest:
+  stage: test
+  script:
+    - gradle test --tests ConsignacaoControllerTest
+
+MargemControllerTest:
+  stage: test
+  script:
+    - gradle test --tests MargemControllerTest

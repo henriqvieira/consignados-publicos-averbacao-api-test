@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items":{
+    "title": "Items",
+    "type": "object",
+    "required": [
+      "dataFimContrato",
+      "orgao",
+      "disponivel",
+      "total",
+      "consumo",
+      "categoria",
+      "departamento",
+      "servidor"
+    ],
+    "properties": {
+      "orgao": {
+        "title": "Orgao",
+        "type": ["string", "null"],
+        "default": "",
+        "pattern": "^.*$"
+      },
+      "disponivel": {
+        "title": "Disponivel",
+        "type": "number",
+        "default": 0
+      },
+      "total": {
+        "title": "Total",
+        "type": "number",
+        "default": 0
+      },
+      "consumo": {
+        "title": "Consumo",
+        "type": "number",
+        "default": 0
+      },
+      "categoria": {
+        "title": "Categoria",
+        "type": "string",
+        "default": "",
+        "pattern": "^.*$"
+      },
+      "departamento": {
+        "title": "Departamento",
+        "type": "string",
+        "default": "",
+        "pattern": "^.*$"
+      },
+      "servidor": {
+        "title": "Servidor",
+        "type": "array",
+        "default": [],
+        "items":{
+          "title": "Items",
+          "type": "object",
+          "required": [
+            "servidor",
+            "cpf",
+            "matricula",
+            "situacaoCodigo",
+            "situacao",
+            "dataAdmissao",
+            "dataFimContrato",
+            "orgaoCodigo",
+            "dataNascimento"
+          ],
+          "properties": {
+            "servidor": {
+              "title": "Servidor",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "cpf": {
+              "title": "Cpf",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "matricula": {
+              "title": "Matricula",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "situacaoCodigo": {
+              "title": "Situacaocodigo",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "situacao": {
+              "title": "Situacao",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "dataAdmissao": {
+              "title": "Dataadmissao",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "dataFimContrato": {
+              "title": "Datafimcontrato",
+              "type": ["string", "null"],
+              "default": "",
+              "pattern": "^.*$"
+            },
+
+            "orgaoCodigo": {
+              "title": "Orgaocodigo",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            },
+            "dataNascimento": {
+              "title": "Datanascimento",
+              "type": "string",
+              "default": "",
+              "pattern": "^.*$"
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}

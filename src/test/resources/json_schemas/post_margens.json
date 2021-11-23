@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "servidor",
+    "cpf",
+    "matricula",
+    "nroContrato",
+    "dataReserva",
+    "adeNumero",
+    "situacao"
+  ],
+  "properties": {
+    "cpf": {
+      "title": "Cpf",
+      "type": "string",
+      "default": "",
+      "pattern": "^.*$"
+    },
+    "matricula": {
+      "title": "Matricula",
+      "type": "string",
+      "default": "",
+      "pattern": "^.*$"
+    },
+    "nroContrato": {
+      "title": "Nrocontrato",
+      "type": "string",
+      "default": "",
+      "pattern": "^.*$"
+    },
+    "dataReserva": {
+      "title": "Datareserva",
+      "type": "string",
+      "default": "",
+      "pattern": "^.*$"
+    },
+    "adeNumero": {
+      "title": "Adenumero",
+      "type": "string",
+      "default": "",
+      "pattern": "^.*$"
+    },
+    "situacao": {
+      "title": "Situacao",
+      "type": "string",
+      "default": "",
+      "pattern": "^.*$"
+    }
+  }
+}
