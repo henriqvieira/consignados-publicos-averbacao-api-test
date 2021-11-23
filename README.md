@@ -1,0 +1,1 @@
+# consignados-publicos-averbacao-api-test
